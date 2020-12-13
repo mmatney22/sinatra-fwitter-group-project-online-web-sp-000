@@ -1,4 +1,6 @@
-<form action="/logout" method="post">
-  Logout?
-  <input type="submit" name="logout" >
-</form>
+<p> Here are your tweets, <%= @user.username %>
+<% @user.tweets.each do |tweet| %>
+  <div>
+    <%= tweet.content %>
+  </div>
+<% end %>
